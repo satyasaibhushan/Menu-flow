@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans';
+    list-style: none;
+    text-decoration: none;
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.menu{
+    width :250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.item{
+    border: 1px solid rgb(245, 137, 137);
+    overflow: hidden;
+}
+.btn{
+    display:block;
+    padding: 10px 15px; 
+    background:  rgb(250, 77, 77);
+    color: azure;
+    position: relative;
+}
+.btn:before{
+    content:"";
+    position: absolute;
+    width: 14px;
+    height:14px;
+    background:  rgb(241, 79, 79);
+    left:12px;
+    bottom:-4px;
+    transform: rotate(45deg);
+}
+.btn i{
+    margin-right: 7px;
+}
+.smenu{
+    background-color: rgb(238, 250, 108);
+    overflow: hidden;
+    transition: max-height 1s;
+    max-height: 0;
+}
+.smenu a{
+    display: block;
+    padding: 13px 26px;
+    color: rgb(53, 63, 204);
+    font-size: 15px;
+    margin: 4px 0;
+    position: relative;
+}
+.smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #aae9a5;
+    left: 0;
+    top: 0;
+    transition: 0.6s;
+    opacity: 0;
+  }
+.smenu a:hover:before{
+    opacity: 1;
+  }
+.item:target .smenu{
+    max-height: 10em;
+  }
